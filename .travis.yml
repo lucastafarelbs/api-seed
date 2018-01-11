@@ -1,0 +1,23 @@
+require: sudo
+language: node_js
+node_js:
+- "8.6"
+branches:
+  only:
+  - develop
+  - master
+  - /^release-.*$/
+  - /^hotfix-.*$/
+  - /^v\d+\.\d+\.\d+$/
+install:
+ - node --version
+ - cd ../
+ - pwd
+ - git clone --depth=1 --no-single-branch https://github.com/$TRAVIS_REPO_SLUG.git $TRAVIS_REPO_SLUG
+ - cd $TRAVIS_REPO_SLUG
+ - pwd
+ - echo $TRAVIS_BRANCH
+ - echo $TRAVIS_TAG
+ - git branch -a
+ - git checkout $TRAVIS_BRANCH
+ - npm i

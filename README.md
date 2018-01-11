@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/osamuca/api-starter.svg?branch=develop)](https://travis-ci.org/osamuca/api-starter)
+
 # api-starter
 Clonando o repo você terá uma api básica, preparada para autenticação e CRUD, os códigos estão modularizados para que você possa escolher outras ferramentas se assim preferir.
 
